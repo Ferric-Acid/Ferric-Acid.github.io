@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+    background-color: #90B4F0;
+}
+
+html, body {
+    min-height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p, a, li, h1, h3{
+    font-family: 'IBM Plex Sans', Helvetica, sans-serif;
+}
+
+a{
+    color: #b9d1ff;
+    background-color: inherit;
+}
+
+a:hover{
+    color: #b1cbff;
+}
+
+a:active{
+    color: #ffffff;
+}
+
+a:visited{
+    color: #0024ff;
+}
+
+h1{
+    margin: 0;
+    padding: 30px;
+    background-color: #5387DB;
+}
+
+ul.nav-menu{
+    background-color: #6F82A2;
+    margin: 0px;
+}
+
+li.nav-elem{
+    display: inline-block;
+    margin: 1%;
+    background-color: inherit;
+}
+
+#static{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+#blank-static{
+    height: inherit;
+}
+
+.article{
+    margin: 20px;
+}
+
+.art-img{
+    max-width: 100%;
+}
+
+h3.art-desc{
+    margin-top: 20px;
+}
+
+footer{
+    background-color: #5387DB;
+    line-height: 7em;
+    text-align: center;
+}
+
+@media screen and (min-width: 800px){
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+
+    main.content{
+        float: left;
+        flex-grow: 1;
+    }
+
+    .article{
+        float: left;
+        margin: 2.5%;
+        padding: 2.5%;
+        width: 45%;
+    }
+
+    .art-img{
+        width: 100%;
+    }
+
+    .art-desc{
+        min-height: 7.5vh;
+    }
+
+    footer{
+        flex-shrink: 0;
+    }
+}
+
+@media screen and (min-width: 1100px){    
+    h1{
+        padding: 30px;
+    }
+
+    .article{
+       float: left;
+       margin: 2.5%;
+       padding: 2.5%;
+       width: 28.333%;
+    }
+
+    .art-img{
+        float: left;
+        width: 100%;
+    }
+
+    .art-desc{
+        float: left;
+        /*min-height: 10vh;*/ /* min-height no es necesario de momento. */
+    }
+
+    footer{
+        float: left;
+        width: 100%;
+    }
+}

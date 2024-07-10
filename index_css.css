@@ -1,6 +1,7 @@
+/* Ajustes generales */
 *{
     box-sizing: border-box;
-    background-color: #90B4F0;
+    background-color: #0D2959;
 }
 
 html, body {
@@ -9,12 +10,21 @@ html, body {
     overflow-x: hidden;
 }
 
-p, a, li, h1, h3{
+p, a, li, h1, h2, h3{
     font-family: 'IBM Plex Sans', Helvetica, sans-serif;
+    color: #C9DBF7;
+    float: none;
+}
+
+h1{
+    font-size:1.5em;
+    border-width: 3px 3px 0 3px;
+    border-style: solid;
+    border-color: #C9DBF7;
 }
 
 a{
-    color: #b9d1ff;
+    color: #2f74e0;
     background-color: inherit;
 }
 
@@ -27,24 +37,38 @@ a:active{
 }
 
 a:visited{
-    color: #0024ff;
+    color: #cec9f7;
 }
 
 h1{
     margin: 0;
-    padding: 30px;
-    background-color: #5387DB;
+    padding: 20px;
 }
 
+img{
+    max-width: 80%;
+}
+
+footer{
+    margin: 0;
+    line-height: 5em;
+    text-align: center;
+}
+
+/* Especificos */
+
 ul.nav-menu{
-    background-color: #6F82A2;
     margin: 0px;
+    border-width: 0 3px 3px 3px;
+    border-style: solid;
+    border-color: #C9DBF7;
 }
 
 li.nav-elem{
     display: inline-block;
     margin: 1%;
     background-color: inherit;
+    color: #0D2959;
 }
 
 #static{
@@ -53,55 +77,87 @@ li.nav-elem{
     width: 100%;
 }
 
-#blank-static{
+.blank{
     height: inherit;
+    color: #fff;
 }
 
-.article{
-    margin: 20px;
-}
-
-.art-img{
+main{
     max-width: 100%;
+}
+
+.intro{
+    float:left;
+    min-width: 25%;
+    max-width: 50%;
+}
+
+img.intro{
+    width: 45%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+img.demo{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.describe{
+    font-size: 0.75em;
+    margin: 5%;
+    padding: 0 7.5% 0 7.5%;
+}
+
+img.gallery{
+    float: left;
+    margin: 2.5%;
+    width: 45%;
 }
 
 h3.art-desc{
     margin-top: 20px;
 }
 
-footer{
-    background-color: #5387DB;
-    line-height: 7em;
-    text-align: center;
-}
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 500px){
     body{
         display: flex;
         flex-direction: column;
         min-height: 100vh;
     }
 
+    
+    .intro{
+        margin: auto;
+        padding: 2.5%;
+        min-width: 80%;
+        float: none;
+    }
+    
+    img.intro{
+        min-width: 50%;
+        max-width: 60%;
+        margin-bottom: 0;
+        margin-left: 25%;
+    }
+    
+    p.demo{
+        float: left;
+        width: 50%;
+    }
+    
+    img.demo{
+        float: left;
+        width: 45%;
+        margin-left: 5%;
+    }
 
     main.content{
         float: left;
         flex-grow: 1;
     }
 
-    .article{
-        float: left;
-        margin: 2.5%;
-        padding: 2.5%;
-        width: 45%;
-    }
-
-    .art-img{
-        width: 100%;
-    }
-
-    .art-desc{
-        min-height: 7.5vh;
-    }
 
     footer{
         flex-shrink: 0;
@@ -130,7 +186,7 @@ footer{
         /*min-height: 10vh;*/ /* min-height no es necesario de momento. */
     }
 
-    footer{
+     footer{
         float: left;
         width: 100%;
     }
